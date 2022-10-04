@@ -1,0 +1,20 @@
+--Query untuk Q1
+select 
+start_date,landmark, subscriber_type from 
+`bigquery-public-data.san_francisco.bikeshare_trips` a
+full outer join `bigquery-public-data.san_francisco.bikeshare_stations` b
+on a.start_station_id = b. station_id
+where start_date between '2016-01-01' and '2016-03-31'
+and (subscriber_type = 'Subscriber'and landmark ='Redwood City')
+order by start_date;
+
+
+--Query untuk Q2
+select 
+start_date,landmark, subscriber_type from 
+`bigquery-public-data.san_francisco.bikeshare_trips` a
+full outer join `bigquery-public-data.san_francisco.bikeshare_stations` b
+on a.start_station_id = b. station_id
+where start_date between '2016-01-01' and '2016-03-31'
+and (subscriber_type = 'Subscriber'and landmark ='Redwood City')
+order by start_date;
